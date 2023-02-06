@@ -1,8 +1,18 @@
 Week 1 - Basics and Setup/Docker and SQL/data_pgadmin
 Week 1 - Basics and Setup/Docker and SQL/ny_taxi_postgres_data
+Week 1 - Basics and Setup/Docker and SQL/output.csv
+Week 1 - Basics and Setup/Docker and SQL/output.csv.gz
+Week 1 - Basics and Setup/Docker and SQL/taxi+_zone_lookup.csv
 Week 1 - Basics and Setup/Terraform-AWS/.terraform/
 Week 1 - Basics and Setup/Terraform-AWS/.terraform.lock.hcl
 Week 1 - Basics and Setup/Terraform-AWS/.terraform.tfstate.lock.info
 Week 1 - Basics and Setup/Terraform-AWS/terraform.tfstate
 Week 1 - Basics and Setup/Terraform-AWS/terraform.tfstate.backup
 Week 1 - Basics and Setup/Terraform-AWS/terraform.tfvars.json
+Week 1 - Basics and Setup/Assignments/Postgres/green_tripdata_2019-01.csv.gz
+Week 1 - Basics and Setup/Assignments/Postgres/output.csv.gz
+Week 1 - Basics and Setup/Assignments/Postgres/taxi+_zone_lookup.csv
+Week 2 - Workflow Ochestration/flows/01_start/output.csv.gz
+Week 2 - Workflow Ochestration/flows/02_aws/data/
+Week 2 - Workflow Ochestration/flows/03_deployments/data/
+Week 2 - Workflow Ochestration/flows/data/
