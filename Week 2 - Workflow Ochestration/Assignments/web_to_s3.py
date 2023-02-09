@@ -9,7 +9,7 @@ from datetime import timedelta
 from sqlalchemy import text
 from subprocess import check_output
 
-@task(retries=3,  cache_key_fn=task_input_hash, cache_expiration=timedelta(days=1))
+@task(retries=3,  cache_key_fn=task_input_hash, cache_expiration=timedelta(1))
 def fetch(dataset_url: str) -> pd.DataFrame:
     """Read data from web into pandas DataFrame"""
 
@@ -22,7 +22,7 @@ def clean(df = pd.DataFrame) -> pd.DataFrame:
 
     df["tpep_pickup_datetime"] = pd.to_datetime(df["tpep_pickup_datetime"])
     df["tpep_dropoff_datetime"] = pd.to_datetime(df["tpep_dropoff_datetime"])
-    print(df.head(2))
+    print(f"The length of the dataframe is {len(df)}")
 
     return df
 
@@ -43,7 +43,7 @@ def write_local(df: pd.DataFrame, color: str, dataset_file: str) -> Path:
 @task()
 def write_s3(path: Path) -> None:
     """Uploading local Parquet file to s3 bucket"""
-    
+
     parentPath = Path(__file__).parent
 
     savepath = (Path(parentPath, path))
@@ -60,8 +60,8 @@ def etl_web_to_s3() -> None:
     """The main ETL function"""
 
     color = "yellow"
-    year = 2021
-    month = 1
+    year = 2019
+    month = 3
     dataset_file = f"{color}_tripdata_{year}-{month:02}"
     dataset_url = f"https://github.com/DataTalksClub/nyc-tlc-data/releases/download/{color}/{dataset_file}.csv.gz"
 
