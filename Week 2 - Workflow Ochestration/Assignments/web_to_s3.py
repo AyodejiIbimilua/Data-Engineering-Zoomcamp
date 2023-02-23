@@ -25,7 +25,7 @@ def clean(df = pd.DataFrame) -> pd.DataFrame:
     print(f"The length of the dataframe is {len(df)}")
 
     return df
-
+    
 @task()
 def write_local(df: pd.DataFrame, color: str, dataset_file: str) -> Path:
     """Write DataFrame locally as parquet file"""
